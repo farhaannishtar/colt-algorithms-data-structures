@@ -13,10 +13,10 @@ class Graph {
     this.adjList[v1].push(v2);
     this.adjList[v2].push(v1);
   }
-  
+
   removeEdge(v1, v2) {
-    this.adjList[v1] = this.adjList[v1].filter(vtx => vtx !== v2);
-    this.adjList[v2] = this.adjList[v2].filter(vtx => vtx !== v1);
+    this.adjList[v1] = this.adjList[v1].filter(v => v !== v2)
+    this.adjList[v2] = this.adjList[v2].filter(v => v !== v1)
   }
 
   removeVertex(vertex) {
@@ -53,7 +53,7 @@ class Graph {
 
     while (stack.length) {
       currVtx = stack.pop();
-      results.push(vtx);
+      results.push(currVtx);
 
       this.adjList[currVtx].forEach(neighbour => {
         if (!visited[neighbour]) {
@@ -76,7 +76,7 @@ class Graph {
 
     while (queue.length) {
       currVtx = queue.shift();
-      results.push(vtx);
+      results.push(currVtx);
 
       this.adjList[currVtx].forEach(neighbour => {
         if (!visited[neighbour]) {
@@ -105,3 +105,5 @@ g.addEdge("C", "E");
 g.addEdge("D", "E");
 g.addEdge("D", "F");
 g.addEdge("E", "F");
+
+console.log('DFSIterative', g.DFSIterative("A"));

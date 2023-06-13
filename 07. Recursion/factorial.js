@@ -13,4 +13,13 @@ factorial(4)
             24
 */
 
-console.log(factorial(4));
+
+console.log("Motivating line");
+
+function factorialFarhaan(num) {
+  if (num === 1) return 1;
+  return num * factorialFarhaan(num-1);
+}
+
+console.log(factorial(6));
+console.log(factorialFarhaan(6));

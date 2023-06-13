@@ -36,4 +36,25 @@ function selectionSort(arr) {
   return arr;
 }
 
-selectionSort([0, 2, 34, 22, 10, 19, 17]);
+console.log(selectionSort([0, 2, 34, 22, 10, 19, 17]));
+console.log(selectionSortFarhaan([0, 2, 34, 22, 10, 19, 17]));
+
+
+function selectionSortFarhaan(arr) {
+
+  const swapFarhaan = (arr, i, j) =>
+    ([arr[i], arr[j]] = [arr[j], arr[i]])
+
+  for (let i = 0; i < arr.length-1; i++) {
+    let min = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+    if (i !== min) {
+      swapFarhaan(arr, i, min);
+    }
+  }
+  return arr;
+}

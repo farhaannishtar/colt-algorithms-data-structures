@@ -48,7 +48,30 @@ function naiveStringSearch(long, short) {
 	return count;
 }
 
+function naiveStringSearchFarhaan(str, subStr) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < subStr.length; j++) {
+      if (str[i + j] !== subStr[j]) break
+      if (j == subStr.length-1) count++;
+    }
+  }
+  return count;
+}
+
+
 console.log(naiveStringSearch("wowomgzomg", "abc"));  // 0
+console.log(naiveStringSearchFarhaan("wowomgzomg", "abc"));  // 0
+console.log("~~~~~~~~`")
+
 console.log(naiveStringSearch("lorie loled", "lol"));  // 1
+console.log(naiveStringSearchFarhaan("lorie loled", "lol"));  // 1
+console.log("~~~~~~~~`")
+
+
 console.log(naiveStringSearch("harold said haha in hamburg", "haha"));  // 1
+console.log(naiveStringSearchFarhaan("harold said haha in hamburg", "haha"));  // 1
+console.log("~~~~~~~~`")
+
 console.log(naiveStringSearch("wowomgzomg", "omg"));  // 2
+console.log(naiveStringSearchFarhaan("wowomgzomg", "omg"));  // 2

@@ -18,7 +18,8 @@ function minSubArrayLen(arr, sum) {
 			total -= arr[start];
 			start++;
     } 
-    // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
+    // current total less than required total but we reach the end,
+    // need this or else we'll be in an infinite loop 
     else {
       break;
     }
@@ -26,3 +27,5 @@ function minSubArrayLen(arr, sum) {
  
   return minLen === Infinity ? 0 : minLen;
 }
+
+minSubArrayLen([2,3,1,2,4,3], 7) // 2a

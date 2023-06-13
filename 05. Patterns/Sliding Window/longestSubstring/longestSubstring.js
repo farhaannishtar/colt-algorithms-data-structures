@@ -11,7 +11,10 @@ function findLongestSubstring(str) {
     // If char exists, move left pointer
     if (seen[char]) {
       start = Math.max(start, seen[char]);
+      console.log('seen[char]: ', seen[char]);
     }
+
+    console.log('char = str[i]: ', char);
 
     // Get length of substring
     longest = Math.max(longest, i - start + 1);
@@ -22,3 +25,6 @@ function findLongestSubstring(str) {
   
   return longest;
 }
+
+
+console.log(findLongestSubstring('rithmschool')) // 7

@@ -10,3 +10,54 @@ function areThereDuplicates(...args) {
 
     return false;
 }
+
+function areThereDuplicatesFarhaan(...args) {
+  const sortedArr = args.sort();
+  let currentIndex = 0;
+  for (let scout = 1; scout < sortedArr.length; scout++) {
+    if (sortedArr[currentIndex] === sortedArr[scout]) return true;
+
+    currentIndex = scout;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

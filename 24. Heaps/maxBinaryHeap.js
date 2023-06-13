@@ -6,15 +6,14 @@ class MaxBinaryHeap {
   insert(value) {
     this.values.push(value);
 
-    let idx = values.length - 1;
+    let idx = this.values.length - 1;
     let parentIdx = Math.floor((idx - 1) / 2);
  
-    while (values[idx] > values[parentIdx]) {
-        [values[idx], values[parentIdx]] = [values[parentIdx], values[idx]];
+    while (this.values[idx] > this.values[parentIdx]) {
+        [this.values[idx], this.values[parentIdx]] = [this.values[parentIdx], this.values[idx]];
         idx = parentIdx;
         parentIdx = Math.floor((idx - 1) / 2);
     }
- 
     return this;
   }
 
@@ -64,7 +63,9 @@ class MaxBinaryHeap {
 
 const heap = new MaxBinaryHeap();
 heap.insert(99);
-heap.insert(2);
+heap.insert(333);
+heap.insert(12);
+heap.insert(47);
 heap.insert(3);
 heap.insert(10000);
 console.log(heap.values);

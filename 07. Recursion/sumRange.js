@@ -1,6 +1,5 @@
 function sumRange(num) {
   if (num === 1) return 1;
-
   return num + sumRange(num - 1);
 }
 
@@ -21,4 +20,13 @@ sumRange(4)
               RETURN 10
 */
 
+function sumRangeFarhaan(num) {
+  if (num === 1) return 1
+  return num + sumRangeFarhaan(num-1);
+}
+
 console.log(sumRange(3));
+console.log(sumRangeFarhaan(3));
+console.log('~~~~~~~~~');
+console.log(sumRange(28));
+console.log(sumRangeFarhaan(28));

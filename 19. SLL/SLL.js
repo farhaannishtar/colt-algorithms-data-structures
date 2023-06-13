@@ -36,7 +36,6 @@ class SLL {
       this.head = null;
       this.tail = null;
       this.length = 0;
-
       return curr;
     }
 

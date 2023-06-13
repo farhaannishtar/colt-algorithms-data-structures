@@ -10,4 +10,5 @@ function insertionSort(arr){
     return arr;
 }
 
-insertionSort([2,1,9,76,4])
+console.log("insertionSort: ", insertionSort([2,1,9,76,4]))
+console.log("insertionSortFarhaan: ", insertionSortFarhaan([2,1,9,76,4]))

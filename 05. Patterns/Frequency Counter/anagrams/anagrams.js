@@ -20,4 +20,39 @@ function validAnagram(str1, str2) {
   return true;
 }
 
-validAnagram('anagrams', 'nagaramm')
+
+const iOnlyHaveOneShot_validAnagram = (str1, str2) => {
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
+  for (char of str1) {
+    frequencyCounter1[char] = (frequencyCounter1[char] || 0) + 1
+  }
+  for (char of str2) {
+    frequencyCounter2[char] = (frequencyCounter2[char] || 0) + 1
+  }
+  console.log(frequencyCounter1);
+  console.log(frequencyCounter2);
+  for (let key in frequencyCounter1) {
+    if (frequencyCounter1[key] !== frequencyCounter2[key]) {
+      return false
+    }
+  }
+  return true;
+}
+
+
+
+
+
+
+console.log(validAnagram('anagram', 'nagaram'));
+console.log(validAnagram('aaz', 'zza'));
+console.log(validAnagram('aazz', 'zzaa'));
+
+console.log(iOnlyHaveOneShot_validAnagram('anagram', 'nagaram'));
+console.log(iOnlyHaveOneShot_validAnagram('aaz', 'zza'));
+console.log(iOnlyHaveOneShot_validAnagram('aazz', 'zzaa'));
+
+
+
+

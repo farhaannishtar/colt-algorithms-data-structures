@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "tailwindcss-opentype": "^1.1.0"
+  }
+}

@@ -41,7 +41,6 @@ class BinarySearchTree {
     }
   }
 
-
   find(value) {
     if (!this.root) return false;
 
@@ -62,20 +61,21 @@ class BinarySearchTree {
 
     return curr;
   }
+
   contains(value) {
     if (!this.root) return false;
 
-    let current = this.root
+    let current = this.root;
     let found = false;
 
     while (current && !found) {
-        if (value < current.value) {
-            current = current.left;
-        } else if (value > current.value) {
-            current = current.right;
-        } else {
-            return true;
-        }
+      if (value < current.value) {
+        current = current.left;
+      } else if (value > current.value) {
+        current = current.right;
+      } else {
+        return true;
+      }
     }
     return false;
   }
@@ -91,7 +91,7 @@ class BinarySearchTree {
     // Loop
     while (queue.length > 0) {
       node = queue.shift();
-      visited.push(node);
+      visited.push(node.value);
 
       if (node.left) queue.push(node.left);
       if (node.right) queue.push(node.right);
@@ -146,7 +146,7 @@ class BinarySearchTree {
       if (node.left) traverse(node.left);
 
       visited.push(node.value);
-      
+
       if (node.right) traverse(node.right);
     }
 
@@ -157,9 +157,10 @@ class BinarySearchTree {
 }
 
 const BST = new BinarySearchTree();
-BST.insert(1);
-BST.insert(2);
-BST.insert(3);
-BST.insert(4);
-BST.insert(5);
-console.log(BST.DFSPreOrder());
+BST.insert(25);
+BST.insert(22);
+console.log(BST.insert(31));
+BST.insert(42);
+BST.insert(15);
+console.log(BST.BFS());
+// console.log(BST.DFSPreOrder());

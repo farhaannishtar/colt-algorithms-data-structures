@@ -8,5 +8,5 @@ No duplicates -> False
 
 ### Example
 a, b, c -> False
-a, b, c, d -> True
+a, b, c, d, a -> True
 1, 1 -> True

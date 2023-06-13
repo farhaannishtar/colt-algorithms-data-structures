@@ -26,22 +26,7 @@ function maxSubArraySum(arr, num) {
   return maxSum;
 }
 
-function maxSubarraySum(arr, num) {
-	// If 
-  if (arr.length < num) return null;
+console.log(maxSubArraySum([1,2,3,4], 2))
 
-  let total = 0;
-
-  for (let i = 0; i < num; i++) {
-     total += arr[i];
-  }
-
-  let currentTotal = total;
-
-  for (let i = num; i < arr.length; i++) {
-     currentTotal += arr[i] - arr[i-num];
-     total = Math.max(total, currentTotal);
-  }
-
-  return total;
-}
+// [1,2,3,4], 2 -> 7
+// [-1, 3, 5, 1], 3 -> 9
